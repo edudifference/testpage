@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>uTutor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" charset="utf-8" src="js/jQuery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/WOW.js"></script>
+    <script src="https://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/scripts.js"></script>
+    <script>new WOW().init();</script>
+  </head>
+  <body>
+    <div class="form-inline" role="form" method="get"> <!-- originally a <form>; caused parse login to fail -->
+      <div class="form-group ">
+         <input type="file" name="fileselect" id="fileselect" class="btn btn-primary" value="Choose Profile Picture"></input>
+      </div>
+      <br><br>
+      <div class="form-group ">
+        <label class="sr-only" for="login-email">Email address</label>
+        <input type="email" class="form-control" id="login-email" placeholder="Enter email" id="email">
+      </div>
+      <br><br>
+      <div class="form-group ">
+        <label class="sr-only" for="login-fname">First Name</label>
+        <input type="text" class="form-control" id="login-fname" placeholder="Enter first name" id="fname">
+      </div>
+      <br><br>
+      <div class="form-group ">
+        <label class="sr-only" for="login-fname">Last Name</label>
+        <input type="text" class="form-control" id="login-lname" placeholder="Enter last name" id="lname">
+      </div>
+      <br><br>
+      <div class="form-group ">
+        <label class="sr-only" for="login-password">Password</label>
+        <input type="password" class="form-control" id="login-password" placeholder="Enter password" id="password">
+      </div>
+      <div class="form-group ">
+        <label class="sr-only" for="login-password">Password</label>
+        <input type="password" class="form-control" id="login-passwordc" placeholder="Enter password" id="passwordc">
+      </div>
+      <br><br>
+      <div class="form-group ">
+        <label class="sr-only" for="login-phone">Phone Number</label>
+        <input type="text" class="form-control" id="login-phone" placeholder="Enter phone number" id="phone">
+      </div>
+      <br><br>
+      <div class="form-group ">
+        <label class="sr-only" for="login-street">Street</label>
+        <input type="text" class="form-control" id="login-street" placeholder="Enter Street Address" id="street">
+      </div>
+      <div class="form-group ">
+        <label class="sr-only" for="login-city">City</label>
+        <input type="text" class="form-control" id="login-city" placeholder="Enter City" id="address">
+      </div>
+      <div class="form-group ">
+        <label class="sr-only" for="login-state">State</label>
+        <input type="text" class="form-control" id="login-state" placeholder="Enter State" id="address">
+      </div>
+      <div class="form-group ">
+        <label class="sr-only" for="login-zip">Zip</label>
+        <input type="text" class="form-control" id="login-zip" placeholder="Enter Zip" id="address">
+      </div>
+      <br><br>
+      <div class="form-group ">
+        <label class="sr-only" for="login-classes">Classes you teach</label>
+        <textarea type="text" class="form-control" id="login-classes" placeholder="Classes you teach" id="classes"></textarea>
+      </div>
+      <br><br>
+      <input id="uploadbutton" type="button" value="Sign Up" class="btn btn-default"/>
+    </div>
+  </body>
+</html>
