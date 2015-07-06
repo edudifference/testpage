@@ -6,6 +6,10 @@ function signup(url) {
   fname = $("#login-fname").val().trim();
   lname = $("#login-lname").val().trim();
   classes = $("#login-classes").val();
+  street = $("#login-street").val();
+  city = $("#login-city").val();
+  state = $("#login-state").val();
+  zip = $("#login-zip").val()
   name = fname + " " + lname;
   alert(name);
   var user = new Parse.User();
@@ -16,10 +20,10 @@ function signup(url) {
   user.set("name", name);
   user.set("url", url);
   user.set("classes", classes);
-  user.set("street", $("login-street").val());
-  user.set("city", $("login-city").val());
-  user.set("state", $("login-state").val());
-  user.set("zip", $("login-zip").val());
+  user.set("street", street);
+  user.set("city", city);
+  user.set("state", state);
+  user.set("zip", zip);
   user.signUp(null, {
     success: function (user) {
       window.location = "home.html";
@@ -46,6 +50,13 @@ function signin() {
 }
 var file;
 
+function handleFileSelect(e) {
+  var files = e.target.files || e.dataTransfer.files;
+  // Our file var now holds the selected file
+  file = files[0];
+}
+  
+
 // Set an event listener on the Choose File field.
 $('#fileselect').bind("change", function (e) {
   var files = e.target.files || e.dataTransfer.files;
@@ -54,9 +65,10 @@ $('#fileselect').bind("change", function (e) {
 });
 
 // This function is called when the user clicks on Upload to Parse. It will create the REST API request to upload this image to Parse.
-$('#uploadbutton').click(function () {
+function signuporiginal() {
   var pw = $("#signup-password").val();
   var pwc = $("#login-passwordc").val();
+  console.log(pw);
   if (pw == pwc) {
     var serverUrl = 'https://api.parse.com/1/files/' + file.name;
     $.ajax({
@@ -83,7 +95,7 @@ $('#uploadbutton').click(function () {
   else {
     alert("Sorry, your passwords didn't match");
   }
-});
+}
 
 function validate() {
   var user = Parse.User.current();
@@ -109,3 +121,4 @@ function logout() {
   Parse.User.logOut();
   window.location = "home.html";
 }
+
