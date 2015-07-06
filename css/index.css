@@ -3,7 +3,7 @@
 @import url(font-awesome.min.css);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Muli);
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
 @import url(http://fonts.googleapis.com/css?family=Lato);
 @import url(metro-bootstrap.min.css);
 
@@ -24,7 +24,7 @@ p
 
 .main .mainh1
 {
-  font-family: 'Pacifico';
+  font-family: 'Oswald';
   font-size: 100px;
 }
 
